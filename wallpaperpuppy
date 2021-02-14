@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Randomly changes the wallpaper at fixed time intervals
+
+INTERVAL=600      # in seconds
+
+while true; do
+  sleep $INTERVAL
+  WALLPAPER=`ls /root/Desktop | sort -R | head -1`
+  set_bg "/root/Desktop/$WALLPAPER"
+done

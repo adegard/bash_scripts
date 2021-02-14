@@ -1,0 +1,12 @@
+#/bin/sh
+#https://wiki.archlinux.org/index.php/Backlight
+
+BRAND=$(ls /sys/class/backlight/ | grep _backlight)
+
+min=0 
+max=$(cat /sys/class/backlight/$BRAND/max_brightness) 
+ 
+valueSet=$(( (min + max)/7 ))
+
+echo "$valueSet" > /sys/class/backlight/$BRAND/brightness
+

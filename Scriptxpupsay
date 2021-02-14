@@ -1,0 +1,6 @@
+#! /bin/bash
+# 16 Dec 2011 Lobster
+# Example 1 hello world example
+
+xpupsay "hello world"
+xpupsay "puppy power"#!/bin/sh
